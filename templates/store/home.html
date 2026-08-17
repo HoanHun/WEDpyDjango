@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Trang chủ - Fashion Shop{% endblock %}
+{% block title %}Trang chủ - Hưng Shop{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -28,7 +28,7 @@
     <!-- ============ DANH SÁCH SẢN PHẨM ============ -->
     <div class="col-lg-9">
         {% if query %}
-        <h5 class="mb-3">Kết quả tìm kiếm cho: "<strong>{{ query }}</strong>"</h5>
+        <h5 class="mb-3">Kết quả tìm kiếm: "<strong>{{ query }}</strong>"</h5>
         {% endif %}
 
         {% if products %}

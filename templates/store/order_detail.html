@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}Chi tiết đơn hàng #{{ order.id }} - Fashion Shop{% endblock %}
+{% block title %}Chi tiết đơn hàng #{{ order.id }} - Hưng Shop{% endblock %}
 
 {% block content %}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{% url 'order_list' %}">Đơn hàng của tôi</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'order_list' %}">Đơn hàng</a></li>
         <li class="breadcrumb-item active">Đơn hàng #{{ order.id }}</li>
     </ol>
 </nav>
@@ -65,6 +65,6 @@
 </div>
 
 <a href="{% url 'order_list' %}" class="btn btn-outline-secondary mt-3">
-    <i class="fa-solid fa-arrow-left me-2"></i>Quay lại danh sách đơn hàng
+    <i class="fa-solid fa-arrow-left me-2"></i>Quay lại
 </a>
 {% endblock %}
