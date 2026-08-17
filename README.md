@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fashion Shop – Trang web bán quần áo (Django)
 
 Dự án Django hoàn chỉnh cho website bán quần áo, đáp ứng đầy đủ yêu cầu:
@@ -188,3 +189,6 @@ Khi `DEBUG=True`, Django tự phục vụ cả static và media qua `urls.py`
 - **Database**: SQLite (mặc định, dev) — khuyến nghị PostgreSQL cho production
 - **Frontend**: Bootstrap 5.3 (CDN), Font Awesome 6 (CDN), CSS/JS tùy chỉnh
 - **Ảnh sản phẩm**: Pillow + Django `ImageField` + `MEDIA_ROOT`
+=======
+# WEDpyDjango
+>>>>>>> 6d153f2fb0e31eaf000319517f6ad1d68a348f71
