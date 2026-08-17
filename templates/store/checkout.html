@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Đặt hàng - Fashion Shop{% endblock %}
+
+{% block content %}
+<h2 class="mb-4"><i class="fa-solid fa-credit-card me-2"></i>Xác nhận đặt hàng</h2>
+
+<div class="row g-4">
+    <!-- FORM THÔNG TIN GIAO HÀNG -->
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light fw-bold">Thông tin giao hàng</div>
+            <div class="card-body">
+                <p class="mb-3"><i class="fa-solid fa-user me-2"></i>Người nhận: <strong>{{ request.user.username }}</strong></p>
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="mb-3">
+                        <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                        <div class="text-danger small">{{ field.errors }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <div class="alert alert-secondary small">
+                        <i class="fa-solid fa-circle-info me-2"></i>
+                        Đây là bản demo: thanh toán khi nhận hàng (COD). Trạng thái đơn hàng sẽ là "Chờ thanh toán".
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fa-solid fa-check me-2"></i>Xác nhận đặt hàng
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TÓM TẮT ĐƠN HÀNG -->
+    <div class="col-md-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light fw-bold">Tóm tắt đơn hàng</div>
+            <ul class="list-group list-group-flush">
+                {% for item in cart %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        {{ item.product.name }}
+                        <span class="text-muted"> x{{ item.quantity }}</span>
+                    </div>
+                    <span>{{ item.total_price|floatformat:0 }} đ</span>
+                </li>
+                {% endfor %}
+                <li class="list-group-item d-flex justify-content-between fw-bold fs-5">
+                    <span>Tổng cộng</span>
+                    <span class="text-danger">{{ cart.get_total_price|floatformat:0 }} đ</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

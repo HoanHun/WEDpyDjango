@@ -1,0 +1,164 @@
+[
+    {
+        "model": "store.category",
+        "pk": 1,
+        "fields": {
+            "name": "Áo thun",
+            "slug": "ao-thun"
+        }
+    },
+    {
+        "model": "store.category",
+        "pk": 2,
+        "fields": {
+            "name": "Quần jean",
+            "slug": "quan-jean"
+        }
+    },
+    {
+        "model": "store.category",
+        "pk": 3,
+        "fields": {
+            "name": "Áo khoác",
+            "slug": "ao-khoac"
+        }
+    },
+    {
+        "model": "store.category",
+        "pk": 4,
+        "fields": {
+            "name": "Váy đầm",
+            "slug": "vay-dam"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 1,
+        "fields": {
+            "name": "Áo thun nam basic",
+            "price": "150000",
+            "description": "Áo thun nam chất liệu cotton 100%, thoáng mát, form regular fit.",
+            "category": 1,
+            "stock": 50,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 2,
+        "fields": {
+            "name": "Áo thun nữ form rộng",
+            "price": "180000",
+            "description": "Áo thun nữ form oversize, phong cách trẻ trung năng động.",
+            "category": 1,
+            "stock": 40,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 3,
+        "fields": {
+            "name": "Quần jean nam slimfit",
+            "price": "350000",
+            "description": "Quần jean nam co giãn nhẹ, form slimfit tôn dáng.",
+            "category": 2,
+            "stock": 30,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 4,
+        "fields": {
+            "name": "Quần jean nữ ống suông",
+            "price": "320000",
+            "description": "Quần jean nữ ống suông, chất liệu jean cao cấp.",
+            "category": 2,
+            "stock": 25,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 5,
+        "fields": {
+            "name": "Áo khoác dù 2 lớp",
+            "price": "420000",
+            "description": "Áo khoác dù chống nước 2 lớp, phù hợp mùa mưa/thu đông.",
+            "category": 3,
+            "stock": 20,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 6,
+        "fields": {
+            "name": "Áo khoác denim nữ",
+            "price": "380000",
+            "description": "Áo khoác denim form rộng, phối đồ dễ dàng.",
+            "category": 3,
+            "stock": 15,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 7,
+        "fields": {
+            "name": "Váy đầm dự tiệc",
+            "price": "550000",
+            "description": "Váy đầm dáng xòe, phù hợp dự tiệc, sự kiện.",
+            "category": 4,
+            "stock": 10,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 8,
+        "fields": {
+            "name": "Váy đầm công sở",
+            "price": "480000",
+            "description": "Váy đầm công sở thanh lịch, chất liệu cao cấp không nhăn.",
+            "category": 4,
+            "stock": 18,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 9,
+        "fields": {
+            "name": "Áo thun cổ tròn unisex",
+            "price": "130000",
+            "description": "Áo thun unisex form basic, phù hợp cả nam và nữ.",
+            "category": 1,
+            "stock": 60,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 10,
+        "fields": {
+            "name": "Quần jean rách gối",
+            "price": "360000",
+            "description": "Quần jean rách gối cá tính, phong cách streetwear.",
+            "category": 2,
+            "stock": 22,
+            "created_at": "2026-01-01T00:00:00Z",
+            "updated_at": "2026-01-01T00:00:00Z"
+        }
+    }
+]
