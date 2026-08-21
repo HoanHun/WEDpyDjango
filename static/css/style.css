@@ -1,34 +1,221 @@
-/* Custom CSS cho Fashion Shop */
+/* ========================================================
+   Hưng SHOP code do hưng viết kết hợp với những người bạn đồng hành
+   Mục tiêu: Tạo ra một giao diện bán hàng trực tuyến hiện đại, tối ưu cho trải nghiệm người dùng, với phong cách sang trọng và nổi bật.
+   Phiên bản 1.0.0 (có thể nâng cấp)
+   phát triển bởi: Hưng và những người bạn đồng hành :)))
+   ======================================================== */
+* {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+}
 
 body {
-    background-color: #f8f9fa;
+    background-color: #f0f4f8; /* Nền xám xanh nhẹ dịu mắt */
+    color: #1e293b;
+    font-family: Arial, sans-serif;
 }
 
-.product-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+/* =========================
+   1. THANH MENU (Đổi sang màu Tím Than Sang Trọng)
+========================= */
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.product-img {
-    height: 220px;
-    object-fit: cover;
+.navbar {
+    background-color: #0f172a !important; /* Màu nền tối làm nổi bật nội dung */
+    border-bottom: 3px solid #6366f1; /* Viền tím nổi */
+    min-height: 75px;
 }
 
 .navbar-brand {
-    font-size: 1.4rem;
+    color: #38bdf8 !important; /* Tên Shop màu Xanh Băng sáng */
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navbar-brand i {
+    color: #38bdf8;
+}
+
+.navbar a {
+    color: #f1f5f9 !important; /* Chữ menu màu trắng rõ nét */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #38bdf8 !important; /* Giữ màu chữ cố định */
+}
+
+/* Icon trên Menu có màu vàng/xanh riêng */
+.fa-house { color: #facc15 !important; }        /* Trang chủ: Vàng */
+.fa-cart-shopping { color: #38bdf8 !important; }/* Giỏ hàng: Xanh nhạt */
+.fa-file-invoice { color: #34d399 !important; }  /* Đơn hàng: Xanh lá */
+.fa-user { color: #f472b6 !important; }          /* Admin: Hồng */
+
+/* =========================
+   2. Ô TÌM KIẾM
+========================= */
+
+.search-box {
+    border: 2px solid #38bdf8;
+    background-color: white;
+    height: 42px;
+    padding: 8px 12px;
+    border-radius: 6px 0 0 6px;
+}
+
+.search-box:focus {
+    outline: none;
+}
+
+.search-button {
+    background-color: #0284c7; /* Nút tìm kiếm xanh biển */
+    color: white;
+    border: none;
+    height: 42px;
+    padding: 0 18px;
+    border-radius: 0 6px 6px 0;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background-color: #0284c7;
+}
+
+/* =========================
+   3. DANH MỤC (Tiêu đề Cam nổi bật)
+========================= */
+
+.category-box {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.category-title {
+    background-color: #ea580c; /* Màu Cam rực rỡ */
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category-box a {
+    display: block;
+    padding: 12px 15px;
+    color: #334155;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f5f9;
+    font-weight: 600;
+}
+
+/* Item đang chọn (Tất cả sản phẩm) */
+.category-box a.active, 
+.category-box a:first-child {
+    background-color: #e0e7ff; /* Nền tím nhạt */
+    color: #4338ca;            /* Chữ tím đậm */
+    font-weight: bold;
+}
+
+.category-box a:hover {
+    background-color: white;
+}
+
+/* =========================
+   4. SẢN PHẨM & BADGE MÀU SẮC
+========================= */
+
+.product-card {
+    background-color: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 15px;
+}
+
+.product-card h5 {
+    color: #0f172a;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Nhãn (Badge) danh mục dưới tên sản phẩm */
+.badge, .bg-secondary {
+    background-color: #059669 !important; /* Màu xanh lá Emerald tươi */
+    color: white !important;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.product-price {
+    color: #e11d48; /* Màu Đỏ Hồng Neon cực nổi */
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* =========================
+   5. NÚT MUA HÀNG (Màu Tím Điện Indigo)
+========================= */
+
+.btn-primary {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+/* =========================
+   6. FOOTER
+========================= */
+
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    border-top: 3px solid #ea580c;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+}
+
+footer h5 {
+    color: #f8fafc;
+    font-weight: bold;
+}
+
+footer a {
+    color: #cbd5e1;
+    text-decoration: none;
 }
 
 footer a:hover {
-    color: #fff !important;
+    color: #cbd5e1;
 }
 
-/* Responsive: giảm chiều cao ảnh sản phẩm trên mobile */
-@media (max-width: 576px) {
-    .product-img {
-        height: 160px;
-    }
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 768px) {
+    .navbar-brand { font-size: 21px; }
+    .product-card img { height: 230px; }
 }
