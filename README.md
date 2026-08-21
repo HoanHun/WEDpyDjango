@@ -1,14 +1,13 @@
 <<<<<<< HEAD
-# Fashion Shop – Trang web bán quần áo (Django)
+# Shop – Trang web bán quần áo (Django)
 
 Dự án Django hoàn chỉnh cho website bán quần áo, đáp ứng đầy đủ yêu cầu:
 Models (Product/Category/Order), đăng ký/đăng nhập/đăng xuất, giỏ hàng + đặt hàng,
 giao diện Bootstrap 5 responsive với `base.html` dùng chung.
 
 > ⚠️ **Lưu ý quan trọng**: Dự án này được viết để bạn **tự chạy trên máy tính cá nhân
-> hoặc host lên một dịch vụ hỗ trợ Python** (Render, Railway, PythonAnywhere, VPS...).
-> Nó **không** chạy được trên Cloudflare Pages/Workers (môi trường sandbox soạn thảo
-> code này) vì đó là nền tảng edge chỉ hỗ trợ JavaScript/TypeScript, không có runtime
+> hoặc host lên một dịch vụ hỗ trợ Python** (Render, Railway, PythonAnywhere, VPS, vân vân).
+> Nó **không** chạy được trên Cloudflare Pages/Workers vì
 > Python, không có filesystem để lưu ảnh upload, và không chạy được Django ORM.
 
 ---
@@ -16,7 +15,7 @@ giao diện Bootstrap 5 responsive với `base.html` dùng chung.
 ## 1. Cấu trúc dự án
 
 ```
-django_clothing_shop/
+django_clothing_shop/ (bán hàng online)
 ├── manage.py
 ├── requirements.txt
 ├── shop_project/          # Cấu hình chính (settings, urls, wsgi)
@@ -98,7 +97,7 @@ Mở trình duyệt tại: **http://127.0.0.1:8000/**
 
 Trang quản trị (Admin): **http://127.0.0.1:8000/admin/**
 → Dùng để thêm/sửa Sản phẩm, Danh mục, xem/đổi trạng thái Đơn hàng, upload hình ảnh sản phẩm.
-
+>>> Lưu ý chủ chạy được trên máy bạn chỉ là host nội bộ
 ---
 
 ## 3. Danh sách trang & URL
@@ -186,7 +185,7 @@ Khi `DEBUG=True`, Django tự phục vụ cả static và media qua `urls.py`
 ## 8. Công nghệ sử dụng
 
 - **Backend**: Python 3.10+, Django 5.0
-- **Database**: SQLite (mặc định, dev) — khuyến nghị PostgreSQL cho production
+- **Database**: SQLite (mặc định, dev) — khuyến nghị PostgreSQL cho production (nhưng bị lỗi khi up nên chưa cài vào postgreSQL)
 - **Frontend**: Bootstrap 5.3 (CDN), Font Awesome 6 (CDN), CSS/JS tùy chỉnh
 - **Ảnh sản phẩm**: Pillow + Django `ImageField` + `MEDIA_ROOT`
 =======
