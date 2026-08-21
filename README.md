@@ -7,7 +7,7 @@ giao diện Bootstrap 5 responsive với `base.html` dùng chung.
 
 > ⚠️ **Lưu ý quan trọng**: Dự án này được viết để bạn **tự chạy trên máy tính cá nhân
 > hoặc host lên một dịch vụ hỗ trợ Python** (Render, Railway, PythonAnywhere, VPS, vân vân).
-> Nó **không** chạy được trên Cloudflare Pages/Workers vì
+> Nó **không** chạy được trên Cloudflare Pages/Workers và chưa hỗ trợ các thứ khác ...
 > Python, không có filesystem để lưu ảnh upload, và không chạy được Django ORM.
 
 ---
@@ -15,7 +15,7 @@ giao diện Bootstrap 5 responsive với `base.html` dùng chung.
 ## 1. Cấu trúc dự án
 
 ```
-django_clothing_shop/ (bán hàng online)
+pywedBanHang/ (bán hàng online)
 ├── manage.py
 ├── requirements.txt
 ├── shop_project/          # Cấu hình chính (settings, urls, wsgi)
@@ -54,9 +54,9 @@ django_clothing_shop/ (bán hàng online)
 
 ## 2. Cài đặt & Chạy dự án (Local)
 
-### Bước 1: Tạo môi trường ảo (khuyến nghị)
+### Bước 1: Tạo môi trường ảo (khuyến nghị  )
 ```bash
-cd django_clothing_shop
+cd pywedBanHang
 python3 -m venv venv
 
 # Windows
@@ -65,7 +65,9 @@ venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
 ```
-
+>> lưu ý :
+>> Nó giúp tạo ra một vùng làm việc độc lập, chứa phiên bản Python riêng và các thư viện (như Django, Flask, Pillow...) chỉ phục vụ cho dự án đó mà không   >> ảnh hưởng đến máy tính hoặc các dự án khác.
+>> tránh xung đột thư viện, gọn nghẹ và dễ chia sẻ cho nhau, giữ sạch hệ điều hành 
 ### Bước 2: Cài thư viện
 ```bash
 pip install -r requirements.txt
